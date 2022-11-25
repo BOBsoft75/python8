@@ -2,13 +2,15 @@
 
 import sys
 from app.controller import ctrl
+import sqlite3
 
-g_mod = None # выбор графического интерфейса
+g_mod = None  # выбор графического интерфейса
 
-d_mod = None # выбор 
+d_mod = None  # выбор
+
 
 def init():
-    
+
     # Выбор графического интерфейса
     # 1 - CLI
     # 2 - GUI
@@ -21,7 +23,7 @@ def init():
 
     for i in range(1, len(sys.argv)):
         match sys.argv[i]:
-            case '-gui': 
+            case '-gui':
                 g_mod = 2
             case '-cli':
                 g_mod = 1
@@ -41,9 +43,11 @@ def init():
 
     if d_mod == None:
         d_mod = 1
-        print('Выбран режим по умолчанию: SQLite')
-    
+        print('Выбран режим по умолчанию: CLI')
+        # print('Выбран режим по умолчанию: SQLite')
+
     return True
+
 
 if init():
     ctrl.init(g_mod, d_mod)

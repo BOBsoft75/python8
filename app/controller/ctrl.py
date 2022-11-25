@@ -44,7 +44,7 @@ def load_from_csv(file_name):
         case 1:
             db_sqlite3.push_data(lst_data)
         case 2:
-            pass
+            db_csv.get_data(lst_data)
         case 3:
             pass
 
