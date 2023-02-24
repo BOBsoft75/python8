@@ -18,7 +18,7 @@ def init():
 
     # Выбор типа хранилища
     # 1 - SQLite
-    # 2 - CSV
+    # 2 - CSV1
     global d_mod
 
     for i in range(1, len(sys.argv)):
